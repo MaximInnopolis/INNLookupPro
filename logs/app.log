@@ -1,0 +1,32 @@
+INNOLookupPRo
+\
+	cmd
+	\
+		client
+		\
+			client.go
+	\
+		logger
+		\
+			logger.go
+	\
+		server
+		\
+			server.go
+			
+	\
+		protos
+		\
+			rusprofile_lookup.proto
+			rusprofile_lookup.pb.go
+			rusprofile_lookup_grpc.pb.go
+\
+	go.mod
+\
+	Makefile
+	2023/11/10 03:12:13 logger.go:39: [Error: Invalid INN. Please try again.]
+2023/11/10 03:12:28 logger.go:39: [Client entered proper INN]
+2023/11/10 03:12:29 logger.go:39: [Client received entered INN: 7736050003]
+2023/11/10 03:12:29 logger.go:39: [Client received Kpp: 781401001]
+2023/11/10 03:12:29 logger.go:39: [Client received CompanyName: ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "ГАЗПРОМ"]
+2023/11/10 03:12:29 logger.go:39: [Client received DirectorName: Миллер Алексей Борисович]

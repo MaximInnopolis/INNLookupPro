@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package protos;
+
+option go_package = "INNLookupPro/protos";
+
+message CompanyInfoRequest {
+  string inn = 1;
+}
+
+message CompanyInfoResponse {
+  string inn = 1;
+  string kpp = 2;
+  string company_name = 3;
+  string director_name = 4;
+}
+
+// Lookup company information based on INN.
+service CompanyInfoService {
+  rpc GetCompanyInfo (CompanyInfoRequest) returns (CompanyInfoResponse);
+}
+
