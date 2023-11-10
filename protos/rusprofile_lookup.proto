@@ -15,8 +15,7 @@ message CompanyInfoResponse {
   string director_name = 4;
 }
 
-// Lookup company information based on INN.
 service CompanyInfoService {
+  // GetCompanyInfo gets company information based on INN.
   rpc GetCompanyInfo (CompanyInfoRequest) returns (CompanyInfoResponse);
 }
-

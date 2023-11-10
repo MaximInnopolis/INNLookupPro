@@ -22,6 +22,7 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type CompanyInfoServiceClient interface {
+	// GetCompanyInfo gets company information based on INN.
 	GetCompanyInfo(ctx context.Context, in *CompanyInfoRequest, opts ...grpc.CallOption) (*CompanyInfoResponse, error)
 }
 
@@ -46,6 +47,7 @@ func (c *companyInfoServiceClient) GetCompanyInfo(ctx context.Context, in *Compa
 // All implementations must embed UnimplementedCompanyInfoServiceServer
 // for forward compatibility
 type CompanyInfoServiceServer interface {
+	// GetCompanyInfo gets company information based on INN.
 	GetCompanyInfo(context.Context, *CompanyInfoRequest) (*CompanyInfoResponse, error)
 	mustEmbedUnimplementedCompanyInfoServiceServer()
 }
